@@ -1,0 +1,423 @@
+* {
+  font-family: "Nunito Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  --bg-color: hsl(0, 100%, 100%);
+  background-color: hsl(0, 0%, 99%);
+  color: hsl(200, 15%, 8%);
+  min-height: 100vh;
+}
+
+body.dark-mode {
+  --bg-color: hsl(209, 23%, 22%);
+  background-color: hsl(207, 26%, 17%);
+  color: hsl(0, 100%, 100%);
+}
+
+main {
+  width: 85%;
+  max-width: 1200px;
+  margin-inline: auto;
+}
+
+body.dark-mode .back-btn {
+  color: hsl(0, 100%, 100%);
+}
+
+.back-btn {
+  background-color: var(--bg-color);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.30);
+  border: none;
+  padding: 4px 16px;
+  display: flex;
+  font-size: 0.95rem;
+  margin-block: 2.5rem;
+}
+
+.back-btn ion-icon {
+  margin-block: auto;
+  font-size: 1.1rem;
+  margin-right: 0.4rem;
+}
+
+.back-btn:hover {
+  transform: translateY(-2px);
+}
+
+main img {
+  width: 100%;
+  max-width: 600px;
+}
+
+main h2 {
+  margin-block: 1.8rem 1.2rem;
+  font-weight: 800;
+  font-size: 1.8rem;
+}
+
+main p {
+  line-height: 2.2;
+  font-weight: 700;
+}
+
+.value {
+  font-weight: 500;
+}
+
+.imp-text {
+  margin-top: 2rem;
+}
+
+.border-container {
+  margin-block: 2rem 1rem;
+}
+
+.border-btn {
+  background-color: white;
+  border: none;
+  outline: none;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.20);
+  margin: 1rem 16px 0 0;
+  padding: 4px 18px;
+}
+
+.loading-screen-only {
+  display: none;
+}
+
+.country-data.loading-screen .country-image {
+  width: 100%;
+  height: 180px;
+  background-color: #ECECEE;
+  border-radius: 6px;
+}
+
+.country-data p {
+  width: unset;
+}
+
+.country-data.loading-screen p {
+  color: transparent;
+  background-color: #ECECEE;
+  height: 16px;
+  margin-bottom: 1rem;
+  border-radius: 6px;
+}
+
+.err-label h2 {
+  margin-bottom: 0;
+}
+
+.err-label p {
+  margin-top: 0;
+}
+
+.loading-screen p.native-name {
+  height: 30px;
+  width: 35%;
+}
+
+.loading-screen .population {
+  width: 60%;
+}
+
+.loading-screen .region {
+  width: 75%;
+}
+
+.loading-screen .sub-region {
+  width: 95%;
+}
+
+.loading-screen .capital {
+  width: 60%;
+}
+
+.loading-screen .imp-text p {
+  height: 26px;
+}
+
+.loading-screen .imp-text .Top-level-domain {
+  width: 65%;
+}
+
+.loading-screen .imp-text .currencies {
+  width: 90%;
+}
+
+.loading-screen .imp-text .languages {
+  width: 55%;
+}
+
+.big-loading-screen .loading-screen p.native-name {
+  height: 30px;
+  width: 45%;
+}
+
+.big-loading-screen .loading-screen .population {
+  width: 80%;
+}
+
+.big-loading-screen .loading-screen .region {
+  width: 90%;
+}
+
+.big-loading-screen .loading-screen .sub-region {
+  width: 100%;
+}
+
+.big-loading-screen .loading-screen .capital {
+  width: 80%;
+}
+
+.big-loading-screen .loading-screen .imp-text p {
+  height: 26px;
+}
+
+.big-loading-screen .loading-screen .imp-text .Top-level-domain {
+  width: 85%;
+}
+
+.big-loading-screen .loading-screen .imp-text .currencies {
+  width: 90%;
+}
+
+.big-loading-screen .imp-text .languages {
+  width: 75%;
+}
+
+
+.loading-screen-only {
+  display: block;
+  height: 30px;
+  width: 100%;
+  margin-block: 0.6rem;
+}
+
+.loading-screen-only div {
+  display: inline-block;
+  width: 25%;
+  height: 100%;
+  margin: 0.4rem 0.4rem 0 0;
+  border-radius: 6px;
+  background-color: #ECECEE;
+}
+
+.loading-screen p,
+.loading-screen .country-image,
+.loading-screen-only div {
+  position: relative;
+  overflow: hidden;
+  background-color: #ECECEE;
+}
+
+.loading-screen p::after,
+.loading-screen .country-image::after,
+.loading-screen-only div::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -150%;
+  height: 100%;
+  width: 150%;
+  background: linear-gradient(90deg,
+      transparent,
+      rgba(255, 255, 255, 0.6),
+      transparent);
+  animation: shimmer 1.2s infinite;
+}
+
+body.dark-mode .loading-screen p,
+body.dark-mode .loading-screen .country-image,
+body.dark-mode .loading-screen-only div {
+  background-color: hsl(210, 18%, 34%);
+}
+
+body.dark-mode .loading-screen p::after,
+body.dark-mode .loading-screen .country-image::after,
+body.dark-mode .loading-screen-only div::after {
+  background: linear-gradient(90deg,
+      transparent,
+      rgba(255, 255, 255, 0.05),
+      transparent);
+}
+
+.hidden,
+.country-data.hidden {
+  display: none;
+}
+
+@keyframes shimmer {
+  100% {
+    transform: translateX(250%);
+  }
+}
+
+
+
+@media (min-width: 640px) {
+  
+  main,
+  header>div {
+    width: 85%;
+  }
+  
+  main h2 {
+    font-size: 1.8rem;
+  }
+  
+  .country-data.loading-screen .country-image {
+    height: 220px;
+  }
+}
+
+@media (min-width: 768px) {
+  
+  main,
+  header>div {
+    width: 90%;
+  }
+  
+  .back-btn {
+    padding: 8px 26px;
+    font-size: 1.2rem;
+    margin-block: 6rem 4rem;
+  }
+  
+  .back-btn ion-icon {
+    font-size: 1.6rem;
+    margin-right: 0.8rem;
+  }
+  
+  .country-data h2 {
+    font-size: 2rem;
+  }
+  
+  main p {
+    font-size: 1.2rem;
+  }
+  
+  .border-btn {
+    padding: 6px 22px;
+    font-size: 1.2rem;
+  }
+  
+  .border-container h3 {
+    font-size: 1.6rem;
+  }
+  
+  .country-data.loading-screen .country-image {
+    width: 50%;
+    height: 240px;
+  }
+  
+  .loading-screen .main-content {
+    width: 100%;
+  }
+}
+
+@media (min-width: 1024px) {
+  
+  .country-data {
+    display: flex;
+    gap: 4rem;
+    align-items: start;
+  }
+  
+  .country-data h2 {
+    font-size: 2.2rem;
+    margin-top: 0;
+  }
+  
+  main p {
+    font-size: 1.2rem;
+  }
+  
+  .border-container h3 {
+    font-size: 2rem;
+  }
+  
+  .border-btn {
+    padding: 8px 26px;
+    font-size: 1.4rem;
+  }
+  
+ .country-image {
+    width: 40%;
+  }
+  
+  .country-details {
+    width: 50%;
+  }
+  
+  .country-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+   .main-data .imp-text {
+    margin: 0;
+    margin-left: 2rem;
+  }
+  
+  .main-data {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: 1560px) {
+  .back-btn {
+    padding: 10px 30px;
+    font-size: 1.6rem;
+    margin-block: 6rem 4rem;
+  }
+  
+  .back-btn ion-icon {
+    font-size: 2rem;
+    margin-right: 1.2rem;
+  }
+  
+  .country-data {
+    align-items: stretch;
+  }
+  
+  .country-data h2 {
+    font-size: 3rem;
+  }
+  
+  .country-data h3 {
+    font-size: 2.6rem;
+  }
+  
+  main p {
+    font-size: 2rem;
+  }
+  
+  .country-details {
+    display: flex;
+    flex-direction: column;
+  }
+  
+   .country-image {
+   width: 50%;
+ }
+  
+  .border-container {
+    margin-top: auto;
+  }
+  
+  .border-btn {
+    padding: 10px 30px;
+    font-size: 2rem;
+  }
+  
+  .country-data.loading-screen .country-image {
+    height: 360px;
+  }
+}

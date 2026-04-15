@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="country.css">
+  <script src="country.js" type="module" charset="utf-8 pm"></script>
+</head>
+
+<body>
+  <header>
+    <div>
+<h1><a href="#">Where in the world?</a></h1>
+      <div class="dark-mode-div">
+        <ion-icon name="moon-outline"></ion-icon>
+        <p>Dark Mode</p>
+      </div>
+    </div>
+  </header>
+  
+  <main>
+    <button class="back-btn">
+      <ion-icon name="arrow-back-outline"></ion-icon>
+      Back</button>
+    
+    <div class="country-data">
+       
+      <div class="country-image">
+        <img src="">
+      </div>
+      
+      <div class="country-details">
+        
+        <h2></h2>
+        
+        <div class="main-data">
+          <div class="main-content">
+            <p class="native-name">Native Name: <span class="value"></span></p>
+            <p class="population">Population: <span class="value"></span></p>
+            <p class="region">Region: <span class="value"></span></p>
+            <p class="sub-region">Sub Region: <span class="value"></span></p>
+            <p class="capital">Capital: <span class="value"></span></p>
+          </div>
+          
+          <div class="imp-text">
+            <p class="Top-level-domain">Top Level Domain: <span class="value"></span></p>
+            <p class="currencies">Currencies: <span class="value"></span></p>
+            <p class="languages">Languages: <span class="value"></span></p>
+          </div>
+        </div>
+        
+        <div class="border-container">
+          <h3>Border Countries:</h3>
+          <div class="border-countries">
+            <div class="loading-screen-only">
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+      
+    </div>
+    
+    <div class="err-label">
+      <h2 class="err"></h2>
+      <p class="hidden">Check your internet connection.</p>
+      <button><ion-icon name="refresh-outline"></ion-icon><span>Retry</span></button>
+    </div>
+  </main>
+  
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>

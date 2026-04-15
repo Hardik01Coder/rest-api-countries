@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rest Api Countries</title>
+ 
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" type="module"></script>
+</head>
+<body>
+  <header>
+    <div>
+      
+    <h1><a href="#">Where in the world?</a></h1>
+    <div class="dark-mode-div">
+    <ion-icon name="moon-outline"></ion-icon>
+    <p>Dark Mode</p>
+    </div>
+     </div>
+  </header>
+  <main>
+<div class="search-area">
+  <div class="search">
+    <div class="ion-div">
+  <ion-icon name="search-sharp"></ion-icon>
+  </div>
+  <input placeholder="Search for a country..." class="search-field">
+  </div>
+  
+ <div class="filter-container">
+  <div class="filter-div">
+    <h2>Filter by Region</h2>
+    <ion-icon class="dropdown-icon" name="chevron-up-outline"></ion-icon>
+  </div>
+  
+  <div class="filter-dropdown">
+    <p>Africa <span></span></p>
+    <p>Americas <span></span></p>
+    <p>Asia <span></span></p>
+    <p>Europe <span></span></p>
+    <p>Oceania <span></span></p>
+  </div>
+   </div>
+   </div>
+  
+  <section class="country-section">
+    
+    <div class="country-card template">
+      <div class="flag">
+      <img src="">
+      </div>
+      <div class="country-info">
+      <h2></h2>
+      
+      <p class="population">Population: <span class="info-value"></span></p>
+      <p class="region">Region: <span class="info-value"></span></p>
+      <p class="capital">Capital: <span class="info-value"></span></p>
+      </div>
+    </div>
+    
+    <div class="err-label">
+    <h2 class="err"></h2>
+    <p class="hidden">Check your internet connection.</p>
+    <button><ion-icon name="refresh-outline"></ion-icon><span>Retry</span></button>
+    </div>
+  </section>
+  </main>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
