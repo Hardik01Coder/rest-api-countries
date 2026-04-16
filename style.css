@@ -469,14 +469,14 @@ body .hidden {
   }
   
   .filter-container {
-    width: 30%;
+    width: 35%;
     display: inline-block;
     margin: auto 0;
   }
   
   .filter-div ion-icon {
     font-size: 1.8rem;
-    padding-inline: 20px;
+    padding-inline: 16px;
   }
   
   .filter-div,
@@ -497,7 +497,7 @@ body .hidden {
     width: 90%;
     margin: 2rem auto;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 70px 50px;
     padding-bottom: 4rem;
   }
