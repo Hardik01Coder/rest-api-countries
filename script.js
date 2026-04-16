@@ -1,4 +1,5 @@
 const body = document.body
+const header = document.querySelector('h1')
 
 const filterBtn = document.querySelector('.filter-div');
 const filterDropdown = document.querySelector('.filter-dropdown');
@@ -124,6 +125,10 @@ async function getCountryData(apiUrl) {
     return false;
   }
 }
+
+header.addEventListener('click', () => {
+location.reload()
+})
 
 const countriesUrl = 'https://restcountries.com/v3.1/all?fields=name,flags,population,region,capital'
 
